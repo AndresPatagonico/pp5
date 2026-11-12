@@ -3,7 +3,6 @@
     Se dividen las responsabilidades en archivos separados.
 """
 
-# Muestra el menu.
 def mostrar_menu():
     print("\n<--- MENÚ DEL BLOG --->")
     print("1. Ver todos los posts")
@@ -14,8 +13,15 @@ def mostrar_menu():
     print("-----------------------")
     
     try:
-        opcion = int(input("Seleccione una opción (1 a 5): ")) # int = convierte lo ingresado en un entero.
+        opcion = int(input("Seleccione una opción (1 a 5): "))
         return opcion
-    except ValueError: # Maneja el error si el usuario ingresa un valor no esperado.
+    except ValueError:
         print("Opción no válida. Por favor, ingrese un número entre 1 y 5.")
         return None
+
+# Nuevas funciones para centralizar los inputs solicitadas en la corrección
+def pedir_termino_busqueda():
+    return input("Ingrese el título o palabra a buscar: ")
+
+def pedir_tag_filtro():
+    return input("Ingrese el tag a filtrar: ")
